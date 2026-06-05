@@ -16,13 +16,14 @@ th{
 body{
 font-family: sans-serif;
 background-color: #f8f5fc;
-color: #333;
+color: white;
 padding: 20px;
 height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 80vh;
+min-height: 100vh;
+text-align: center;
 }
 
 #tela-listagem{
@@ -33,13 +34,13 @@ min-height: 80vh;
 .btn-menu{
     background-color: #7b2cbf;
     color: white;
-    border:none;
+    border: none;
     padding: 12px 24px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
-    margin-right: 10px;
+    margin: 20px 20px;
     transition: background-color 0.2s ease, transform 0.1s ease
 }
 
@@ -55,3 +56,11 @@ min-height: 80vh;
     display: none;
 }
 
+.caixa-menu{
+    background-color: blueviolet;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-direction: column;
+    border-radius: 20px;
+}
