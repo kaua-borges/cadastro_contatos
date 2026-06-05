@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-    <form action="">
+
+    <section id="tela-menu">
+        <h1>Agenda de Contatos</h1>
+        <button id="btn-cadastro" class="btn-menu">Cadastrar</button>
+        <button id="btn-excluir" class="btn-menu">excluir</button>
+        <button id="btn-alterar" class="btn-menu">alterar</button>
+    </section>
+
+    <section id="tela-cadastro">
+        <form action="">
         <div class="campo-formulario">
             <label for="inome">Nome:</label>
             <input type="text" name="Nome" id="inome">
@@ -32,18 +41,24 @@
         </div>
         <input type="submit" value="Enviar">
     </form>
-
-    <div>
+    </section>
+    
+    <section id="tela-listagem">
+        <div>
         <label for="busca">Pesquisar:</label>
         <input type="text" id="busca">
     </div>
 
-    <button id="btn-alfabetica">Ordem Alfabetica</button>
+    <div class="box-button">
+        <button id="btn-alfabetica">Ordem Alfabetica</button>
 
-    <button id="btn-criacao">Ordem de criacao</button>
     
-    <button id="btn-numerica">Ordem numerica</button>
-
+        <button id="btn-criacao">Ordem de criacao</button>
+    
+    
+        <button id="btn-numerica">Ordem numerica</button>
+    </div>
+    
     <table>
         <thead>
             <tr>
@@ -58,7 +73,7 @@
 
         <tbody id="tabela-contatos"></tbody>
     </table>
-
+    </section>
     <script src="../js/script.js" ></script>
 </body>
 </html>

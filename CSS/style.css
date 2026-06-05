@@ -1,7 +1,51 @@
 .campo-formulario{
 margin: 20px 10px 10px 20px;
+display: flex;
+flex-direction: column;
 }
 
 th{
     padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.box-button{
+    display: flex;
+}
+
+body{
+font-family: sans-serif;
+background-color: #f8f5fc;
+color: #333;
+padding: 20px;
+}
+
+#tela-listagem{
+    border-collapse: collapse;
+    padding-left: 20px;
+}
+
+.btn-menu{
+    background-color: #7b2cbf;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-menu:hover{
+    background-color: #5a189a;
+}
+
+.btn-menu:active{
+    transform: scale(0.98);
+}
+
+#tela-cadastro, #tela-listagem{
+    display: none;
 }
