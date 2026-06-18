@@ -133,3 +133,119 @@ text-align: center;
 .btn-modal-secundario:hover {
     background-color: #b3b3b3;
 }
+
+/* --- CLASSES DE SUPORTE PARA OS BOTÕES DENTRO DA TABELA --- */
+.btn-tabela-alterar {
+    background-color: #7b2cbf;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-tabela-alterar:hover {
+    background-color: #5a189a;
+}
+
+.btn-tabela-excluir {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-tabela-excluir:hover {
+    background-color: #b82531;
+}
+
+/* --- NOVAS REGRAS PARA ELIMINAR ESTILOS INLINE DO HTML --- */
+.subtitulo-menu {
+    color: white; 
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.grupo-botoes-form {
+    margin-top: 15px;
+}
+
+.btn-primario {
+    background-color: #7b2cbf; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-weight: bold; 
+    border-radius: 6px; 
+    cursor: pointer;
+}
+
+.btn-secundario {
+    background-color: #ccc; 
+    color: #333; 
+    border: none; 
+    padding: 10px 20px; 
+    font-weight: bold; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    margin-left: 10px;
+}
+
+.barra-pesquisa {
+    color: #333; 
+    margin-bottom: 15px;
+}
+
+.btn-secundario-pequeno {
+    background-color: #ccc; 
+    color: #333; 
+    border: none; 
+    padding: 5px 15px; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    margin-left: 20px;
+}
+
+.grupo-ordenacao {
+    margin-bottom: 20px; 
+    justify-content: center; 
+    gap: 10px;
+}
+
+.btn-ordenacao {
+    cursor: pointer; 
+    padding: 8px 12px; 
+    border-radius: 4px; 
+    border: 1px solid #7b2cbf;
+    background-color: white;
+    transition: background-color 0.2s;
+}
+
+.btn-ordenacao:hover {
+    background-color: #f1e4ff;
+}
+
+.tabela-custom {
+    width: 100%; 
+    min-width: 600px; 
+    background: white; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#cabecalho-tabela {
+    background-color: #7b2cbf; 
+    color: white;
+}
