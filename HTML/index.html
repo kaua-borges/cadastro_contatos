@@ -3,79 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agenda de Contatos</title>
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
 
     <div class="caixa-menu">
-    <section id="tela-menu">
-        <h1>Agenda de Contatos</h1>
-        <button id="btn-cadastro" class="btn-menu">Cadastrar contato</button>
-        <button id="btn-excluir" class="btn-menu">Excluir contato</button>
-        <button id="btn-alterar" class="btn-menu">Alterar contato</button>
-    </section>
+        <section id="tela-menu">
+            <h1>Agenda de Contatos</h1>
+            <p style="color: white; margin-bottom: 20px;">o que deseja fazer com o Contato:</p>
+            <button id="btn-cadastro" class="btn-menu">Cadastrar</button>
+            <button id="btn-listar" class="btn-menu">Visualizar</button>
+            <button id="btn-alterar" class="btn-menu">Alterar</button>
+        </section>
     </div>
 
     <section id="tela-cadastro">
-        <form action="">
-        <div class="campo-formulario">
-            <label for="inome">Nome:</label>
-            <input type="text" name="Nome" id="inome">
-        </div>
-        
-        <div class="campo-formulario">
-            <label for="iTelefone">Telefone:</label> 
-            <input type="tel" name="Telefone" id="iTelefone">
-        </div>
-        <div class="campo-formulario">
-            <label for="iEndereco">Endereco:</label>
-            <input type="text" name="Endereco" id="iEndereco">
-        </div>
-        
-        <div class="campo-formulario">
-            <label for="iEmail">Email:</label>
-            <input type="email" name="Email" id="iEmail">
-        </div>
-        <div class="campo-formulario">
-            <label for="inascimento">nascimento:</label>
-            <input type="date" name="nascimento" id="inascimento">
-        </div>
-        <input type="submit" value="Enviar">
-    </form>
+        <h2 style="color: #333;">Cadastro / Alteração de Contato</h2>
+        <form id="form-contato" action="">
+            <div class="campo-formulario">
+                <label for="inome">Nome:</label>
+                <input type="text" name="Nome" id="inome" required>
+            </div>
+            
+            <div class="campo-formulario">
+                <label for="iTelefone">Telefone:</label> 
+                <input type="tel" name="Telefone" id="iTelefone" required>
+            </div>
+            <div class="campo-formulario">
+                <label for="iEndereco">Endereco:</label>
+                <input type="text" name="Endereco" id="iEndereco">
+            </div>
+            
+            <div class="campo-formulario">
+                <label for="iEmail">Email:</label>
+                <input type="email" name="Email" id="iEmail">
+            </div>
+            <div class="campo-formulario">
+                <label for="inascimento">nascimento:</label>
+                <input type="date" name="nascimento" id="inascimento">
+            </div>
+            <input type="submit" id="btn-enviar" value="Enviar" style="background-color: #7b2cbf; color: white; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer;">
+            <button type="button" id="btn-voltar-cadastro" style="background-color: #ccc; color: #333; border: none; padding: 10px 20px; font-weight: bold; border-radius: 6px; cursor: pointer; margin-left: 10px;">Voltar</button>
+        </form>
     </section>
     
     <section id="tela-listagem">
-        <div>
-        <label for="busca">Pesquisar:</label>
-        <input type="text" id="busca">
-    </div>
+        <h2 id="titulo-listagem" style="color: #333;">Listagem de Contatos</h2>
+        <div style="color: #333; margin-bottom: 15px;">
+            <label for="busca">Pesquisar:</label>
+            <input type="text" id="busca" placeholder="Digite nome ou telefone...">
+            <button type="button" id="btn-voltar-listagem" style="background-color: #ccc; color: #333; border: none; padding: 5px 15px; font-weight: bold; border-radius: 4px; cursor: pointer; margin-left: 20px;">Voltar ao Menu</button>
+        </div>
 
-    <div class="box-button">
-        <button id="btn-alfabetica">Ordem Alfabetica</button>
-
-    
-        <button id="btn-criacao">Ordem de criacao</button>
-    
-    
-        <button id="btn-numerica">Ordem numerica</button>
-    </div>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th>Endereco</th>
-                <th>Email</th>
-                <th>data de nascimento</th>
-                <th>Acoes</th>
-            </tr>
-        </thead>
-
-        <tbody id="tabela-contatos"></tbody>
-    </table>
+        <div class="box-button" style="margin-bottom: 20px; justify-content: center; gap: 10px;">
+            <button id="btn-alfabetica" style="cursor:pointer; padding: 8px 12px; border-radius:4px; border:1px solid #7b2cbf;">Ordem Alfabetica</button>
+            <button id="btn-criacao" style="cursor:pointer; padding: 8px 12px; border-radius:4px; border:1px solid #7b2cbf;">Ordem de criacao</button>
+            <button id="btn-numerica" style="cursor:pointer; padding: 8px 12px; border-radius:4px; border:1px solid #7b2cbf;">Ordem numerica</button>
+        </div>
+        
+        <table style="width: 100%; min-width: 600px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <thead>
+                <tr id="cabecalho-tabela" style="background-color: #7b2cbf; color: white;">
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Endereco</th>
+                    <th>Email</th>
+                    <th>data de nascimento</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-contatos"></tbody>
+        </table>
     </section>
-    <script src="../js/script.js" ></script>
+
+    <div id="caixa-modal" class="modal-overlay">
+        <div class="modal-conteudo">
+            <p id="modal-mensagem">Mensagem aqui</p>
+            <div id="modal-botoes" class="modal-botoes"></div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
