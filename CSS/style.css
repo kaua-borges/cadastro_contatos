@@ -69,7 +69,7 @@ text-align: center;
     color: white;
 }
 
-/* --- NOVOS ESTILOS PARA OS MODAIS DE MENSAGEM --- */
+
 .modal-overlay {
     display: none;
     position: fixed;
@@ -134,7 +134,7 @@ text-align: center;
     background-color: #b3b3b3;
 }
 
-/* --- CLASSES DE SUPORTE PARA OS BOTÕES DENTRO DA TABELA --- */
+
 .btn-tabela-alterar {
     background-color: #7b2cbf;
     color: white;
@@ -166,7 +166,7 @@ text-align: center;
     background-color: #b82531;
 }
 
-/* --- NOVAS REGRAS PARA ELIMINAR ESTILOS INLINE DO HTML --- */
+
 .subtitulo-menu {
     color: white; 
     margin-bottom: 20px;
